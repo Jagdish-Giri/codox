@@ -18,26 +18,26 @@
 </head>
 <body>
   <div class="bg-layer"></div>
-  <main class="shell">
+  <main class="shell fade-in">
     <header class="top">
       <div>
         <p class="eyebrow">Instant QR Lab</p>
-        <h1>Turn text into a scannable QR.</h1>
+        <h1 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 2.6rem; color: var(--accent); text-shadow: 0 2px 16px rgba(14,165,233,0.12);">Turn text into a scannable QR.</h1>
         <p class="lede">Type anything, tap generate, and download a crisp code ready to share or print.</p>
       </div>
     </header>
 
-    <section class="panel">
-      <div class="form">
-        <label for="textInput">Your text</label>
-        <textarea id="textInput" rows="4" placeholder="Paste a URL, Wi‑Fi info, or any short text..."></textarea>
+    <section class="panel panel-glass">
+      <div class="form form-glass">
+        <label for="textInput" style="font-size: 1.1rem; color: var(--accent-2);">Your text</label>
+        <textarea id="textInput" rows="4" placeholder="Paste a URL, Wi‑Fi info, or any short text..." style="font-size: 1.08rem;"></textarea>
         <div class="actions">
-          <button id="generateBtn" class="btn primary">Generate QR</button>
-          <button id="downloadBtn" class="btn ghost" disabled>Download PNG</button>
+          <button id="generateBtn" class="btn primary btn-glow">Generate QR</button>
+          <button id="downloadBtn" class="btn ghost btn-glow" disabled>Download PNG</button>
         </div>
         <p id="status" class="status"></p>
       </div>
-      <div class="qr-wrap">
+      <div class="qr-wrap qr-glass">
         <div class="fx fx-loading" id="fx-loading">
           <div class="spinner"></div>
           <p class="fx-text">Charging up...</p>
@@ -52,6 +52,9 @@
         </div>
         <div id="qr" class="qr"></div>
         <p class="hint">Tip: bigger contrast scans better. Try dark code on light background.</p>
+        <footer class="footer">
+          <span>Made by <a href="https://github.com/Girish-Giri" target="_blank" style="color:var(--accent-2);text-decoration:none;font-weight:600;">Girish Giri</a></span>
+        </footer>
       </div>
     </section>
   </main>
