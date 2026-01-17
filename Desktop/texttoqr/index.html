@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text to QR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+    integrity="sha512-M0XoA6AHCkDx76LYJEWoQiBgmN54V6pYmeo5sC66R8uTPYfzzBYn7d3HkjU3HWz4oFMdxZd8d0RhxPp4LrSIWQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    onerror="(function(){var s=document.createElement('script');s.src='https://unpkg.com/qrcodejs@1.0.0/qrcode.min.js';document.head.appendChild(s);}())"
+  ></script>
+</head>
+<body>
+  <div class="bg-layer"></div>
+  <main class="shell">
+    <header class="top">
+      <div>
+        <p class="eyebrow">Instant QR Lab</p>
+        <h1>Turn text into a scannable QR.</h1>
+        <p class="lede">Type anything, tap generate, and download a crisp code ready to share or print.</p>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="form">
+        <label for="textInput">Your text</label>
+        <textarea id="textInput" rows="4" placeholder="Paste a URL, Wi‑Fi info, or any short text..."></textarea>
+        <div class="actions">
+          <button id="generateBtn" class="btn primary">Generate QR</button>
+          <button id="downloadBtn" class="btn ghost" disabled>Download PNG</button>
+        </div>
+        <p id="status" class="status"></p>
+      </div>
+      <div class="qr-wrap">
+        <div class="fx fx-loading" id="fx-loading">
+          <div class="spinner"></div>
+          <p class="fx-text">Charging up...</p>
+        </div>
+        <div class="fx fx-smash" id="fx-smash">
+          <div class="hammer">
+            <div class="hammer-head"></div>
+            <div class="hammer-handle"></div>
+          </div>
+          <div class="crack"></div>
+          <div class="shards"></div>
+        </div>
+        <div id="qr" class="qr"></div>
+        <p class="hint">Tip: bigger contrast scans better. Try dark code on light background.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
