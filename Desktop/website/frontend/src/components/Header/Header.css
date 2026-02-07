@@ -1,0 +1,114 @@
+.header{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logodiv{
+    justify-content: space-between;
+}
+.navbarforpc{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+.navbarlinksforpc{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    
+}
+.navbarlinksformobile{
+    display: none;
+}
+li{
+    list-style: none;
+}
+.signupbuttondiv{
+    justify-content: space-between;
+}
+.signupbuttonpc{
+    padding: 10px 20px;
+    background-color: #00ff48;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.signupbutton{
+    padding: 10px 20px;
+    background-color: #00ff48;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.logo{
+    font-family: "Orbitron", sans-serif;
+}
+.color{
+    color: #00ff48;
+}
+.menuicon{
+    display: none;
+}
+.mobilemenu,
+.navbarlinksformobile,
+.menu{
+    display: none;
+}
+.mobilemenu{
+    transform: translateY(-610px);
+    transition: 0.3s ease;
+}
+.mobilemenu.active{
+    transform: translateY(0px);
+    transition: 0.3s ease;
+}
+@media (max-width: 768px) {
+    .navbarlinksforpc{
+        display: none;
+    }
+    .signupbuttonpc{
+        display: none;
+    }
+    .navbarlinksformobile{
+        display: block;
+        text-align: center;
+        background-color: #00ff48;
+        border: 1px solid black;
+        padding: 20px 20px;
+        height: auto;
+        
+    }
+    .mobilemenu{
+        top: 90px;
+        position: relative;
+        transition: top 0.3s ease;
+    }
+    .navbarlinksformobile > li{
+        padding: 10px;
+    }
+    .signupbutton{
+        margin-top: 10px;
+    }
+    .menuicon{
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: #00ff48;
+        padding: 10px;
+        border-radius: 30px;
+    }
+    .mobilemenu,
+.navbarlinksformobile,
+.menu{
+    display: block;
+}
+    
+}
