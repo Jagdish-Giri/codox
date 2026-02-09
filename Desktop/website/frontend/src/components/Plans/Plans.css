@@ -1,0 +1,51 @@
+.plantextcontainer {
+    text-align: center;
+    padding-top: 155px;
+    
+}
+.plantext{
+    font-size: 60px;
+    font-family: 'orbitron', sans-serif;
+    padding-bottom: 15px;
+}
+.plantextcontainer > p{
+    font-size: 20px;
+}
+.plancards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 70px;
+    justify-items: center;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+.plancard{
+    border: 1px solid black;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: left;
+    width: 90%;
+}
+.plancard > h1 {
+    font-family: 'orbitron', sans-serif;
+    font-size: 50px;
+    margin-bottom: 55px;
+}
+.plancard > p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.plancard > h6 {
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+.check{
+    background-color: #00ff48;
+    padding: 3px;
+    font-size: 22px;
+    border-radius: 5px;
+}

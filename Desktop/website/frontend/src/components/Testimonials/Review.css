@@ -1,0 +1,17 @@
+.reviewtextcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+    margin-top: 155px;
+}
+.reviewtext {
+    font-size: 60px;
+    font-family: 'orbitron', sans-serif;
+    padding-bottom: 15px;
+}
+.reviewtextcontainer > p{
+    font-size: 20px;
+}

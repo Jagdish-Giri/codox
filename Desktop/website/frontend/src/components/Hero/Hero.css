@@ -1,9 +1,15 @@
 .hero-section {
     margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .herocontent {
     position: relative;
     width: 100%;
+    text-align: center;
 }
 .bg{
     width: 100%;
@@ -20,14 +26,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 .herotext{
     font-family: "Orbitron", sans-serif;
     font-weight: bold;
     font-size: 96px;
-    width: 80%;
+    width: 100%;
     text-align: center;
     padding-top: 75px;
+    text-align: center;
 }
 .herotext > span{
     font-family: "Orbitron", sans-serif;
