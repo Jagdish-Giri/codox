@@ -8,6 +8,7 @@
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: white;
 }
 .logodiv{
     justify-content: space-between;
@@ -88,8 +89,11 @@ li{
     }
     .mobilemenu{
         top: 90px;
-        position: relative;
-        transition: top 0.3s ease;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        transition: transform 0.3s ease;
     }
     .navbarlinksformobile > li{
         padding: 10px;

@@ -1,0 +1,43 @@
+.slider{
+    display: flex;
+    background-color: #00ff48;
+    padding: 20px;
+    font-family: "Odibee Sans", sans-serif;
+    margin-top: 35px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    animation: scroll-left 20s linear infinite;
+}
+
+.slidertext {
+    color: black;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: "Orbitron", sans-serif;
+    white-space: nowrap;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+.sliderback{
+    width: 101%;
+    height: 2.5cm;
+    margin-left: -3px;
+    padding-left: 20px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    z-index: 1;
+    margin-top: -2.5cm;
+    rotate: -2deg;
+}
