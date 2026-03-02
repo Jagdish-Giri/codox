@@ -132,27 +132,54 @@
   .course-card {
     min-width: calc(50% - 0.5rem);
   }
+  
+  .carouseltoptext {
+    font-size: 50px;
+  }
 }
 
 @media (max-width: 768px) {
   .carousel-container {
     padding: 0 3rem;
+    margin-top: 100px;
   }
 
   .carousel-btn {
-    width: 45px;
-    height: 45px;
-    font-size: 1.3rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+    box-shadow: 0 4px 12px rgba(0, 255, 72, 0.25);
+    transition: all 0.3s ease;
+  }
+  
+  .carousel-btn:hover {
+    box-shadow: 0 6px 20px rgba(0, 255, 72, 0.4);
+  }
+  
+  .carouseltoptext {
+    font-size: 44px;
+    line-height: 1.2;
+  }
+  
+  .carouselcontainer > p {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+  
+  .course-card {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   }
 }
 
 @media (max-width: 580px) {
   .carousel-container {
     padding: 0 2.5rem;
+    margin-top: 80px;
   }
   
   .course-card {
     min-width: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   }
   
   .carousel-track {
@@ -160,12 +187,31 @@
   }
 
   .carousel-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
   }
   
   .course-image {
-    height: 150px;
+    height: 160px;
+  }
+  
+  .carouseltoptext {
+    font-size: 36px;
+    line-height: 1.25;
+  }
+  
+  .carouselcontainer > p {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+  
+  .course-footer h3 {
+    font-size: 0.95rem;
+  }
+  
+  .play-btn {
+    padding: 0.45rem 1.2rem;
+    font-size: 14px;
   }
 }

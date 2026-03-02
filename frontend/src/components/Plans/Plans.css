@@ -26,6 +26,14 @@
     border-radius: 15px;
     text-align: left;
     width: 90%;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+}
+
+.plancard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: #00ff48;
 }
 .plancard > h1 {
     font-family: 'orbitron', sans-serif;
@@ -62,40 +70,76 @@
 }
 
 @media (max-width: 768px) {
+    .plantextcontainer {
+        padding-top: 100px;
+    }
     .plancards {
         grid-template-columns: 1fr;
-        padding-left: 30px;
-        padding-right: 30px;
-        gap: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+        gap: 25px;
     }
     .plancard {
-        padding: 30px;
+        padding: 35px;
         width: 100%;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+    }
+    .plancard:hover {
+        box-shadow: 0 8px 25px rgba(0, 255, 72, 0.15);
+        transform: translateY(-3px);
     }
     .plancard > h1 {
-        font-size: 40px;
+        font-size: 42px;
         margin-bottom: 30px;
     }
     .plantext {
-        font-size: 40px;
+        font-size: 44px;
+        line-height: 1.2;
     }
     .plantextcontainer > p {
         font-size: 18px;
+        padding: 0 20px;
     }
 }
 
 @media (max-width: 480px) {
+    .plantextcontainer {
+        padding-top: 80px;
+    }
     .plancards {
         padding-left: 20px;
         padding-right: 20px;
+        gap: 20px;
     }
     .plancard {
-        padding: 25px;
+        padding: 28px;
+        border-width: 2px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     }
     .plancard > h1 {
-        font-size: 32px;
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+    .plancard > p {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    .plancard > h6 {
+        font-size: 14px;
+        margin-bottom: 25px;
     }
     .plantext {
-        font-size: 32px;
+        font-size: 36px;
+        line-height: 1.25;
+    }
+    .plantextcontainer > p {
+        font-size: 16px;
+        padding: 0 15px;
+        line-height: 1.6;
+    }
+    .check {
+        font-size: 18px;
+        padding: 2px;
     }
 }

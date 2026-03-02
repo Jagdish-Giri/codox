@@ -54,11 +54,48 @@
     gap: 20px;
     margin-top: 60px;
 }
+
+.herobuttondiv button {
+    padding: 12px 28px;
+    border-radius: 25px;
+    border: 2px solid black;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.herobuttondiv .signupbuttonpc {
+    background-color: #00ff48;
+    color: #000;
+}
+
+.herobuttondiv .signupbuttonpc:hover {
+    background-color: #000;
+    color: #00ff48;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 255, 72, 0.3);
+}
+
 .getstartedbutton{
     padding: 10px 20px;
     background-color: transparent;
     border-radius: 20px;
     border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.getstartedbutton:hover {
+    background-color: #00ff48;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 72, 0.3);
+}
+
+.getstartedbutton:active {
+    transform: translateY(0);
 }
 
 @media (max-width: 1024px) {
@@ -78,14 +115,60 @@
 }
 
 @media (max-width: 768px) {
+    .hero-section {
+        margin-top: 70px;
+    }
     .herotext {
-        font-size: 48px;
-        padding-top: 30px;
+        font-size: 56px;
+        padding-top: 40px;
+        line-height: 1.15;
+        letter-spacing: -1px;
     }
     .heroparagraph {
-        width: 80%;
+        width: 85%;
         font-size: 18px;
-        margin-top: 40px;
+        margin-top: 35px;
+        line-height: 1.7;
+    }
+    .herotextdiv {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .herobuttondiv {
+        flex-direction: row;
+        gap: 15px;
+        margin-top: 45px;
+    }
+    .herobuttondiv button {
+        padding: 12px 28px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .getstartedbutton:hover {
+        background-color: #00ff48;
+        transform: translateY(-2px);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        margin-top: 75px;
+    }
+    .herotext {
+        font-size: 42px;
+        padding-top: 30px;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+    }
+    .heroparagraph {
+        width: 92%;
+        font-size: 16px;
+        margin-top: 25px;
+        line-height: 1.65;
+        font-weight: 400;
     }
     .herotextdiv {
         padding-left: 20px;
@@ -93,22 +176,16 @@
     }
     .herobuttondiv {
         flex-direction: column;
-        gap: 15px;
-        margin-top: 40px;
+        gap: 12px;
+        margin-top: 35px;
+        width: 100%;
+        padding: 0 20px;
     }
-}
-
-@media (max-width: 480px) {
-    .herotext {
-        font-size: 36px;
-        padding-top: 20px;
-    }
-    .heroparagraph {
-        width: 95%;
+    .herobuttondiv button {
+        width: 100%;
+        padding: 14px 0;
         font-size: 16px;
-        margin-top: 30px;
-    }
-    .herobuttondiv {
-        margin-top: 30px;
+        font-weight: 600;
+        border-radius: 30px;
     }
 }

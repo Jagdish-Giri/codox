@@ -38,6 +38,14 @@
     border-radius: 20px;
     border: 1px solid black;
     padding: 30px 30px 35px 35px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.reviewcard:hover {
+    border-color: #00ff48;
+    box-shadow: 0 8px 25px rgba(0, 255, 72, 0.15);
 }
 .reviewcardcontainer{
     display: flex;
@@ -92,34 +100,81 @@
 }
 
 @media (max-width: 768px) {
+    .reviewtextcontainer {
+        margin-top: 100px;
+        gap: 1rem;
+    }
     .reviewtext {
-        font-size: 40px;
+        font-size: 44px;
+        line-height: 1.2;
     }
     .reviewtextcontainer > p {
         font-size: 18px;
+        padding: 0 20px;
+        line-height: 1.6;
     }
     .reviewcard {
-        padding: 20px;
-        min-width: 280px;
+        padding: 25px;
+        min-width: 300px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+    }
+    .reviewcard:hover {
+        box-shadow: 0 8px 25px rgba(0, 255, 72, 0.1);
+        transform: translateY(-3px);
     }
     .reviewpersonidentity > img {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
+        border: 2px solid #00ff48;
+    }
+    .reviewcardcontainer {
+        animation: slide-left 30s linear infinite;
+    }
+    .reviewcardcontainer2 {
+        animation: slide-right 30s linear infinite;
     }
 }
 
 @media (max-width: 480px) {
-    .reviewtext {
-        font-size: 32px;
-    }
     .reviewtextcontainer {
-        margin-top: 100px;
+        margin-top: 80px;
+        padding: 0 15px;
+    }
+    .reviewtext {
+        font-size: 36px;
+        line-height: 1.25;
     }
     .reviewtextcontainer > p {
         font-size: 16px;
+        padding: 0 10px;
+        line-height: 1.65;
     }
     .reviewcard {
-        padding: 15px;
-        min-width: 250px;
+        padding: 20px;
+        min-width: 280px;
+        border-width: 2px;
+    }
+    .reviewcard > p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    .reviewpersonidentity > img {
+        width: 40px;
+        height: 40px;
+    }
+    .reviewpersonidentity h4 {
+        font-size: 15px;
+    }
+    .reviewpersonidentity h6 {
+        font-size: 12px;
+    }
+    .reviewcardcontainer,
+    .reviewcardcontainer2 {
+        gap: 15px;
+        margin-top: 40px;
+    }
+    .reviewcardcontainer2 {
+        margin-top: 15px;
     }
 }

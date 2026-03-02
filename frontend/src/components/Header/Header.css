@@ -89,6 +89,17 @@ li{
     transition: 0.3s ease;
 }
 @media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    .navbarforpc {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .logo {
+        font-size: 24px;
+    }
     .navbarlinksforpc{
         display: none;
     }
@@ -96,40 +107,77 @@ li{
         display: none;
     }
     .navbarlinksformobile{
-        display: block;
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        background-color: #00ff48;
-        border: 1px solid black;
-        padding: 20px 20px;
+        background: linear-gradient(135deg, #00ff48 0%, #00e043 100%);
+        border: 2px solid black;
+        padding: 25px 20px;
         height: auto;
-        
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 10px 30px rgba(0, 255, 72, 0.2);
+    }
+    .navbarlinksformobile li {
+        padding: 12px;
+        transition: all 0.3s ease;
+    }
+    .navbarlinksformobile a {
+        color: #000;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'Orbitron', sans-serif;
+    }
+    .navbarlinksformobile li:hover {
+        transform: translateX(5px);
     }
     .mobilemenu{
-        top: 90px;
+        top: 79px;
         position: fixed;
         left: 0;
         width: 100%;
         z-index: 999;
-        transition: transform 0.3s ease;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 0 15px;
     }
-    .navbarlinksformobile > li{
-        padding: 10px;
+    .mobilemenu.active {
+        transform: translateY(0);
     }
     .signupbutton{
-        margin-top: 10px;
+        margin-top: 15px;
+        width: 100%;
+        padding: 12px 0;
+        font-size: 16px;
+        font-weight: 700;
+        background-color: #000;
+        color: #00ff48;
+        border: 2px solid #000;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .signupbutton:hover {
+        background-color: #fff;
+        color: #000;
+        transform: scale(1.02);
     }
     .menuicon{
         display: block;
-        width: 50px;
-        height: 50px;
-        background-color: #00ff48;
+        width: 45px;
+        height: 45px;
+        background: linear-gradient(135deg, #00ff48 0%, #00e043 100%);
         padding: 10px;
-        border-radius: 30px;
+        border-radius: 50%;
+        border: 2px solid #000;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .menuicon:hover {
+        transform: rotate(90deg) scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 255, 72, 0.3);
     }
     .mobilemenu,
-.navbarlinksformobile,
-.menu{
-    display: block;
-}
-    
+    .navbarlinksformobile,
+    .menu{
+        display: block;
+    }
 }
