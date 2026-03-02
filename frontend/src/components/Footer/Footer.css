@@ -57,9 +57,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #00ff48;
+    background: transparent;
     border-radius: 50%;
-    color: #111;
+    color: #00ff48;
     text-decoration: none;
     transition: all 0.3s ease;
     border: 1px solid #00ff48;
@@ -158,15 +158,9 @@
     }
     
     .social-icon {
-        width: 45px;
-        height: 45px;
-        font-size: 18px;
-        box-shadow: 0 4px 12px rgba(0, 255, 72, 0.2);
-    }
-    
-    .social-icon:hover {
-        transform: translateY(-8px) scale(1.1);
-        box-shadow: 0 12px 30px rgba(0, 255, 72, 0.4);
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
     }
     
     .footer-section ul li {
