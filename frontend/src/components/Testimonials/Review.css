@@ -1,0 +1,84 @@
+.reviewtextcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+    margin-top: 155px;
+}
+.star{
+    color: #00ff48;
+}
+.reviewtext {
+    font-size: 60px;
+    font-family: 'orbitron', sans-serif;
+    padding-bottom: 15px;
+}
+.reviewtextcontainer > p{
+    font-size: 20px;
+}
+.reviewpersonidentity > img{
+    width: 7.5%;
+    height: 7.5%;
+    border-radius: 50%;
+}
+.reviewpersonidentity{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.identity{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.reviewcard{
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 30px 30px 35px 35px;
+}
+.reviewcardcontainer{
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+    width: 200%;
+    animation: slide-left 25s linear infinite;
+}
+.reviewcardcontainer:hover{
+    animation-play-state: paused;
+}
+.reviewcardcontainer2{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    width: 150%;
+    animation: slide-right 25s linear infinite;
+}
+.reviewcardcontainer2:hover{
+    animation-play-state: paused;
+}
+.review{
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-25%);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-22%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
