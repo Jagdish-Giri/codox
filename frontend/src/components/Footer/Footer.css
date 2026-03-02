@@ -67,6 +67,13 @@
     font-size: 18px;
 }
 
+.social-icon svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: auto;
+}
+
 .social-icon:hover {
     background: #00ff48;
     color: #111;
