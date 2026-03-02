@@ -1,43 +1,12 @@
 .slider{
     display: flex;
-    background: linear-gradient(135deg, #00ff48 0%, #00e043 50%, #00ff48 100%);
-    background-size: 200% 100%;
+    background-color: #00ff48;
     padding: 20px;
     font-family: "Odibee Sans", sans-serif;
     margin-top: 35px;
     position: relative;
     z-index: 2;
     overflow: hidden;
-    animation: wave-gradient 4s ease-in-out infinite;
-}
-
-@keyframes wave-gradient {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.slider::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  animation: shine-slider 3s infinite;
-}
-
-@keyframes shine-slider {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
 }
 
 .slider-track {
@@ -51,19 +20,6 @@
     font-weight: bold;
     font-family: "Orbitron", sans-serif;
     white-space: nowrap;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 20px rgba(255, 255, 255, 0.5);
-    position: relative;
-    z-index: 1;
-    animation: text-pulse 2s ease-in-out infinite;
-}
-
-@keyframes text-pulse {
-  0%, 100% {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 0 20px rgba(255, 255, 255, 0.5);
-  }
-  50% {
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15), 0 0 30px rgba(255, 255, 255, 0.8);
-  }
 }
 
 @keyframes scroll-left {
@@ -92,15 +48,10 @@
 @media (max-width: 768px) {
     .slider {
         padding: 18px 15px;
-        animation: wave-gradient 6s ease-in-out infinite;
-    }
-    .slider::after {
-        animation: shine-slider 4s infinite;
     }
     .slidertext {
         font-size: 36px;
         font-weight: 700;
-        animation: text-pulse 3s ease-in-out infinite;
     }
     .sliderback {
         height: 2cm;
@@ -114,16 +65,11 @@
 @media (max-width: 480px) {
     .slider {
         padding: 15px 10px;
-        animation: wave-gradient 8s ease-in-out infinite;
-    }
-    .slider::after {
-        animation: shine-slider 5s infinite;
     }
     .slidertext {
         font-size: 28px;
         font-weight: 700;
         letter-spacing: 0.5px;
-        animation: text-pulse 4s ease-in-out infinite;
     }
     .sliderback {
         height: 1.7cm;

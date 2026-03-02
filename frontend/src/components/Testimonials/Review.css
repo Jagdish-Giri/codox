@@ -6,26 +6,6 @@
     text-align: center;
     gap: 0.8rem;
     margin-top: 155px;
-    position: relative;
-}
-
-.reviewtextcontainer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, rgba(0, 255, 72, 0.15) 0%, transparent 70%);
-    border-radius: 50%;
-    animation: scale-pulse 3s ease-in-out infinite;
-    pointer-events: none;
-}
-
-@keyframes scale-pulse {
-    0%, 100% { transform: translateX(-50%) scale(0.8); opacity: 0.5; }
-    50% { transform: translateX(-50%) scale(1.3); opacity: 1; }
 }
 .star{
     color: #00ff48;
@@ -34,28 +14,6 @@
     font-size: 60px;
     font-family: 'orbitron', sans-serif;
     padding-bottom: 15px;
-    position: relative;
-    z-index: 1;
-}
-
-.reviewtext::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #00ff48, #00ff48);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    opacity: 0;
-    animation: text-glow 2s ease-in-out infinite;
-}
-
-@keyframes text-glow {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 0.3; }
 }
 .reviewtextcontainer > p{
     font-size: 20px;
@@ -78,34 +36,16 @@
 }
 .reviewcard{
     border-radius: 20px;
-    border: 2px solid #e0e0e0;
+    border: 1px solid black;
     padding: 30px 30px 35px 35px;
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-    position: relative;
-    overflow: hidden;
-}
-
-.reviewcard::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #00ff48, transparent);
-    transition: left 0.6s ease;
-}
-
-.reviewcard:hover::before {
-    left: 100%;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .reviewcard:hover {
     border-color: #00ff48;
-    box-shadow: 0 12px 35px rgba(0, 255, 72, 0.2);
-    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 255, 72, 0.15);
 }
 .reviewcardcontainer{
     display: flex;
