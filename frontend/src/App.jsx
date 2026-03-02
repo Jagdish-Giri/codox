@@ -1,22 +1,32 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
-import Hero from './components/Hero/Hero'
-import Slider from './components/Slider/Slider'
-import Carousel from './components/Carousel/Carousel'
-import Plans from './components/Plans/Plans'
-import Review from './components/Testimonials/Review'
+import Home from './pages/Home'
+import About from './pages/About'
+import Services from './pages/Services'
+import Courses from './pages/Courses'
+import Contact from './pages/Contact'
+import FAQ from './pages/FAQ'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import Terms from './pages/Terms'
 import Footer from './components/Footer/Footer'
+
 const App = () => {
   return (
-    <>
-    <Header />
-    <Hero />
-    <Slider />
-    <Carousel />
-    <Plans />
-    <Review />
-    <Footer />
-    </>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/courses' element={<Courses />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/faq' element={<FAQ />} />
+        <Route path='/privacy' element={<PrivacyPolicy />} />
+        <Route path='/terms' element={<Terms />} />
+      </Routes>
+      <Footer />
+    </Router>
   )
 }
 

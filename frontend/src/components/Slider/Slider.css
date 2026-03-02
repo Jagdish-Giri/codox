@@ -44,3 +44,29 @@
 .slidercontainer{
     padding-bottom: 155px;
 }
+
+@media (max-width: 768px) {
+    .slidertext {
+        font-size: 32px;
+    }
+    .sliderback {
+        height: 2cm;
+        margin-top: -2cm;
+    }
+    .slidercontainer {
+        padding-bottom: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slidertext {
+        font-size: 24px;
+    }
+    .sliderback {
+        height: 1.5cm;
+        margin-top: -1.5cm;
+    }
+    .slidercontainer {
+        padding-bottom: 80px;
+    }
+}

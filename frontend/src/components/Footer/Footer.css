@@ -94,6 +94,20 @@
     padding-left: 5px;
 }
 
+/* React Router Link styling */
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.footer-section a:hover {
+    color: #00ff48;
+    padding-left: 5px;
+}
+
 .footer-section p {
     font-size: 14px;
     color: #ccc;

@@ -49,3 +49,53 @@
     font-size: 22px;
     border-radius: 5px;
 }
+
+@media (max-width: 1024px) {
+    .plancards {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .plantext {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .plancards {
+        grid-template-columns: 1fr;
+        padding-left: 30px;
+        padding-right: 30px;
+        gap: 30px;
+    }
+    .plancard {
+        padding: 30px;
+        width: 100%;
+    }
+    .plancard > h1 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    .plantext {
+        font-size: 40px;
+    }
+    .plantextcontainer > p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .plancards {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .plancard {
+        padding: 25px;
+    }
+    .plancard > h1 {
+        font-size: 32px;
+    }
+    .plantext {
+        font-size: 32px;
+    }
+}

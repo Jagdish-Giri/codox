@@ -60,3 +60,55 @@
     border-radius: 20px;
     border: 1px solid black;
 }
+
+@media (max-width: 1024px) {
+    .herotext {
+        font-size: 72px;
+        padding-top: 50px;
+    }
+    .heroparagraph {
+        width: 60%;
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .herotextdiv {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .herotext {
+        font-size: 48px;
+        padding-top: 30px;
+    }
+    .heroparagraph {
+        width: 80%;
+        font-size: 18px;
+        margin-top: 40px;
+    }
+    .herotextdiv {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .herobuttondiv {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .herotext {
+        font-size: 36px;
+        padding-top: 20px;
+    }
+    .heroparagraph {
+        width: 95%;
+        font-size: 16px;
+        margin-top: 30px;
+    }
+    .herobuttondiv {
+        margin-top: 30px;
+    }
+}
