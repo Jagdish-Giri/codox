@@ -57,9 +57,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #00ff48;
+    background: transparent;
     border-radius: 50%;
-    color: #111;
+    color: #00ff48;
     text-decoration: none;
     transition: all 0.3s ease;
     border: 1px solid #00ff48;
