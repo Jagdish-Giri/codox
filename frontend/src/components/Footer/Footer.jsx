@@ -45,9 +45,7 @@ const Footer = () => {
 
         <div className="footer-section">
           <h3>Contact Us</h3>
-          <p>� 123 Main Street, City, Country</p>
           <p>📧 Email: info@codox.com</p>
-          <p>📞 Phone: +1 (123) 456-7890</p>
         </div>
       </div>
 
