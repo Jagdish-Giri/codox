@@ -26,60 +26,148 @@
   justify-content: center;
 }
 
-.loader-box {
+/* Laptop Container */
+.laptop-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
-  padding: 60px 80px;
-  border: 3px solid #000;
-  border-radius: 15px;
-  background: #ffffff;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  gap: 8px;
 }
 
-/* Logo Reveal Animation */
-.logo-reveal {
-  display: flex;
-  gap: 8px;
+.laptop-screen {
+  width: 500px;
+  height: 320px;
+  background: #f8f9fa;
+  border: 3px solid #000;
+  border-radius: 12px 12px 8px 8px;
+  position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.laptop-base {
+  width: 560px;
+  height: 12px;
+  background: #000;
+  border-radius: 0 0 15px 15px;
+  position: relative;
+}
+
+.laptop-base::before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background: #333;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* USB Icon Animation */
+.usb-icon {
+  position: absolute;
+  top: 50%;
+  right: -80px;
+  transform: translateY(-50%);
+  font-size: 60px;
+  color: #000;
+  opacity: 0;
+  animation: usbConnect 1s ease-out forwards;
+}
+
+.usb-icon.connected {
+  animation: usbConnect 0.8s ease-out forwards, usbPulse 0.3s ease-out 0.8s;
+}
+
+@keyframes usbConnect {
+  0% {
+    right: -80px;
+    opacity: 0;
+  }
+  60% {
+    right: 20px;
+    opacity: 1;
+  }
+  100% {
+    right: 15px;
+    opacity: 0;
+  }
+}
+
+@keyframes usbPulse {
+  0%, 100% {
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    transform: translateY(-50%) scale(1.15);
+  }
+}
+
+/* Loading Screen */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.5s ease-out;
+}
+
+.loading-screen.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* CODOX Logo */
+.codox-logo {
+  display: flex;
+  gap: 6px;
 }
 
 .letter {
   font-family: 'Orbitron', sans-serif;
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 900;
   color: #000;
   letter-spacing: 2px;
   opacity: 0;
-  transform: translateY(30px);
-  animation: letterSlideIn 0.6s ease-out forwards;
+  transform: translateY(20px);
 }
 
-.letter:nth-child(1) {
-  animation-delay: 0.1s;
+.loading-screen.show .letter {
+  animation: letterReveal 0.4s ease-out forwards;
 }
 
-.letter:nth-child(2) {
+.loading-screen.show .letter:nth-child(1) {
   animation-delay: 0.2s;
 }
 
-.letter:nth-child(3) {
+.loading-screen.show .letter:nth-child(2) {
   animation-delay: 0.3s;
 }
 
-.letter:nth-child(4) {
+.loading-screen.show .letter:nth-child(3) {
   animation-delay: 0.4s;
 }
 
-.letter:nth-child(5) {
+.loading-screen.show .letter:nth-child(4) {
   animation-delay: 0.5s;
 }
 
-@keyframes letterSlideIn {
+.loading-screen.show .letter:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+@keyframes letterReveal {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
@@ -87,13 +175,12 @@
   }
 }
 
-/* Loading Info */
-.loading-info {
+/* Loading Details */
+.loading-details {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  width: 400px;
+  gap: 12px;
+  width: 350px;
 }
 
 .progress-bar-container {
@@ -112,47 +199,72 @@
   border-radius: 8px;
 }
 
-.progress-text {
+.loading-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loading-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.progress-percentage {
   font-family: 'Orbitron', sans-serif;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 700;
   color: #000;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .loader-box {
-    padding: 50px 60px;
-    gap: 40px;
+  .laptop-screen {
+    width: 420px;
+    height: 280px;
+  }
+
+  .laptop-base {
+    width: 470px;
+  }
+
+  .usb-icon {
+    font-size: 50px;
   }
 
   .letter {
-    font-size: 52px;
-    gap: 6px;
+    font-size: 40px;
   }
 
-  .loading-info {
-    width: 320px;
-  }
-
-  .progress-text {
-    font-size: 20px;
+  .loading-details {
+    width: 300px;
   }
 }
 
 @media (max-width: 480px) {
-  .loader-box {
-    padding: 40px 45px;
-    gap: 35px;
+  .laptop-screen {
+    width: 320px;
+    height: 220px;
+  }
+
+  .laptop-base {
+    width: 360px;
+    height: 10px;
+  }
+
+  .usb-icon {
+    font-size: 40px;
   }
 
   .letter {
-    font-size: 42px;
+    font-size: 32px;
     gap: 4px;
   }
 
-  .loading-info {
+  .loading-details {
     width: 250px;
   }
 
@@ -160,7 +272,11 @@
     height: 6px;
   }
 
-  .progress-text {
-    font-size: 18px;
+  .loading-text {
+    font-size: 12px;
+  }
+
+  .progress-percentage {
+    font-size: 14px;
   }
 }
