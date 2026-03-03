@@ -17,13 +17,11 @@ const Preloader = () => {
   return (
     <div className='preloader'>
       <div className='preloader-content'>
-        <div className='logo-animation'>
-          <div className='logo-box'>
-            <span className='logo-text'>CODOX</span>
+        <div className='spinner-container'>
+          <div className='spinner'>
+            <div className='spinner-inner'></div>
           </div>
-          <div className='loading-bar'>
-            <div className='loading-progress'></div>
-          </div>
+          <div className='brand-name'>CODOX</div>
         </div>
       </div>
     </div>
