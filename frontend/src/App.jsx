@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Services from './pages/Services'
 import Courses from './pages/Courses'
+import CourseDetail from './pages/CourseDetail'
 import Contact from './pages/Contact'
 import FAQ from './pages/FAQ'
 import Login from './pages/Login'
@@ -46,6 +47,7 @@ const App = () => {
           <Route path='/about' element={<About />} />
           <Route path='/services' element={<Services />} />
           <Route path='/courses' element={<Courses />} />
+          <Route path='/course/:id' element={<CourseDetail />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/faq' element={<FAQ />} />
           <Route path='/login' element={<Login />} />

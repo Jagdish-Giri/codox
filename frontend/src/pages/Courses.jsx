@@ -2,7 +2,8 @@ import React from 'react'
 import './Pages.css'
 import Carousel from '../components/Carousel/Carousel'
 import Plans from '../components/Plans/Plans'
-import { IoSearch } from "react-icons/io5";
+import { IoSearch } from "react-icons/io5"
+import { Link } from 'react-router-dom'
 
 const Courses = () => {
   const [searchTerm, setSearchTerm] = React.useState('');
@@ -115,7 +116,7 @@ const Courses = () => {
                   <div className='course-instructor'>
                     <p>By {course.instructor}</p>
                   </div>
-                  <button className='course-btn'>View Course</button>
+                  <Link to={`/course/${course.id}`} className='course-btn'>View Course</Link>
                 </div>
               </div>
             ))}
