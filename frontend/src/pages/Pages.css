@@ -9,19 +9,19 @@
 
 .courses-hero {
   text-align: center;
-  padding: 100px 20px 80px;
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  border-bottom: 3px solid #00ff48;
+  padding: 80px 20px 60px;
+  background: #ffffff;
+  border-bottom: 2px solid #00ff48;
 }
 
 .courses-hero h1 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 72px;
-  margin-bottom: 25px;
+  font-size: 60px;
+  margin-bottom: 20px;
   color: #000;
   font-weight: 900;
   letter-spacing: -1px;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .courses-hero .highlight {
@@ -29,9 +29,9 @@
 }
 
 .courses-hero p {
-  font-size: 22px;
-  color: #555;
-  max-width: 700px;
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
   margin: 0 auto;
   font-weight: 500;
 }
@@ -768,16 +768,16 @@
 @media (max-width: 768px) {
   /* Courses Page Responsive */
   .courses-hero {
-    padding: 70px 20px 50px;
+    padding: 60px 20px 40px;
   }
 
   .courses-hero h1 {
-    font-size: 52px;
-    margin-bottom: 20px;
+    font-size: 44px;
+    margin-bottom: 15px;
   }
 
   .courses-hero p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .courses-content {
@@ -916,16 +916,16 @@
   }
 
   .courses-hero {
-    padding: 60px 20px 40px;
+    padding: 50px 20px 35px;
   }
 
   .courses-hero h1 {
-    font-size: 40px;
-    margin-bottom: 15px;
+    font-size: 36px;
+    margin-bottom: 12px;
   }
 
   .courses-hero p {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .courses-content {
