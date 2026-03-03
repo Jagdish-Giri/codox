@@ -8,27 +8,34 @@
 
 .page-hero {
   text-align: center;
-  padding: 80px 20px 60px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-bottom: 3px solid #00ff48;
+  padding: 100px 20px 80px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #ffffff 100%);
+  border-bottom: 4px solid #00ff48;
+  box-shadow: 0 4px 20px rgba(0, 255, 72, 0.08);
 }
 
 .page-hero h1 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 64px;
-  margin-bottom: 20px;
+  font-size: 72px;
+  margin-bottom: 25px;
   color: #000;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.1;
 }
 
 .page-hero .highlight {
   color: #00ff48;
+  text-shadow: 0 0 30px rgba(0, 255, 72, 0.2);
 }
 
 .page-hero p {
-  font-size: 20px;
-  color: #666;
-  max-width: 600px;
+  font-size: 22px;
+  color: #555;
+  max-width: 700px;
   margin: 0 auto;
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
 .page-content {
@@ -43,11 +50,13 @@
 
 .content-section h2 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 36px;
-  margin-bottom: 30px;
+  font-size: 42px;
+  margin-bottom: 40px;
   color: #000;
-  border-left: 5px solid #00ff48;
+  border-left: 6px solid #00ff48;
   padding-left: 20px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
 }
 
 .content-section p {
@@ -271,30 +280,66 @@
 .course-benefits {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-top: 30px;
+  gap: 30px;
+  margin-top: 40px;
 }
 
 .benefit-item {
   display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 10px;
-  border: 1px solid #e9ecef;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 15px;
+  border: 2px solid #e9ecef;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 72, 0.05), transparent);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.benefit-item:hover {
+  border-color: #00ff48;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 255, 72, 0.12);
+  background: linear-gradient(135deg, #ffffff 0%, #fafbfc 100%);
+}
+
+.benefit-item:hover::before {
+  left: 100%;
 }
 
 .benefit-icon {
-  font-size: 24px;
+  font-size: 32px;
   color: #00ff48;
-  min-width: 30px;
+  min-width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 255, 72, 0.08);
+  border-radius: 12px;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
 }
 
 .benefit-item p {
   margin: 0;
-  font-size: 16px;
+  font-size: 17px;
   color: #333;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 /* FAQ Styles */
@@ -517,11 +562,28 @@
   
   .course-benefits {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 25px;
   }
   
   .benefit-item {
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+  }
+
+  .benefit-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 255, 72, 0.12);
+  }
+
+  .benefit-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 26px;
+  }
+
+  .benefit-item p {
+    font-size: 16px;
   }
 }
 
@@ -695,8 +757,22 @@
   }
   
   .benefit-item {
-    padding: 20px;
+    padding: 22px;
     border-width: 2px;
+    gap: 18px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .benefit-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 255, 72, 0.1);
+  }
+
+  .benefit-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 24px;
   }
   
   .benefit-item .icon {
@@ -710,7 +786,8 @@
   }
   
   .benefit-item p {
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 500;
   }
   
   .legal-section h2 {
