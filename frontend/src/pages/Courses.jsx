@@ -2,6 +2,7 @@ import React from 'react'
 import './Pages.css'
 import Carousel from '../components/Carousel/Carousel'
 import Plans from '../components/Plans/Plans'
+import { IoSearch } from "react-icons/io5";
 
 const Courses = () => {
   const [searchTerm, setSearchTerm] = React.useState('');
@@ -83,7 +84,7 @@ const Courses = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
               className='search-input'
             />
-            <span className='search-icon'>🔍</span>
+            <span className='search-icon'><IoSearch /></span>
           </div>
           
           <div className='filter-buttons'>

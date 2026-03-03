@@ -282,34 +282,27 @@
 
 .page-hero {
   text-align: center;
-  padding: 100px 20px 80px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #ffffff 100%);
-  border-bottom: 4px solid #00ff48;
-  box-shadow: 0 4px 20px rgba(0, 255, 72, 0.08);
+  padding: 80px 20px 60px;
+  background: #ffffff;
+  border-bottom: 2px solid #00ff48;
 }
 
 .page-hero h1 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 72px;
-  margin-bottom: 25px;
+  font-size: 60px;
+  margin-bottom: 20px;
   color: #000;
   font-weight: 900;
   letter-spacing: -1px;
   line-height: 1.1;
 }
 
-.page-hero .highlight {
-  color: #00ff48;
-  text-shadow: 0 0 30px rgba(0, 255, 72, 0.2);
-}
-
 .page-hero p {
-  font-size: 22px;
-  color: #555;
-  max-width: 700px;
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
   margin: 0 auto;
   font-weight: 500;
-  letter-spacing: 0.3px;
 }
 
 .page-content {

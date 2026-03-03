@@ -5,7 +5,7 @@ const Terms = () => {
   return (
     <div className='page-container'>
       <div className='page-hero'>
-        <h1>Terms & <span className='highlight'>Conditions</span></h1>
+        <h1>Terms & Conditions</h1>
         <p>Please read these terms carefully before using our services</p>
       </div>
       

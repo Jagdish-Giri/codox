@@ -46,7 +46,7 @@ const FAQ = () => {
   return (
     <div className='page-container'>
       <div className='page-hero'>
-        <h1>Frequently Asked <span className='highlight'>Questions</span></h1>
+        <h1>Frequently Asked Questions</h1>
         <p>Find answers to common questions about Codox</p>
       </div>
       

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Pages.css'
+import { MdLocationOn, MdEmail, MdPhone, MdAccessTime } from 'react-icons/md'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -27,7 +28,7 @@ const Contact = () => {
   return (
     <div className='page-container'>
       <div className='page-hero'>
-        <h1>Contact <span className='highlight'>Us</span></h1>
+        <h1>Contact Us</h1>
         <p>We'd love to hear from you</p>
       </div>
       
@@ -39,7 +40,7 @@ const Contact = () => {
             
             <div className='contact-details'>
               <div className='contact-item'>
-                <span className='contact-icon'>📍</span>
+                <span className='contact-icon'><MdLocationOn /></span>
                 <div>
                   <h4>Location</h4>
                   <p>123 Main Street, City, Country</p>
@@ -47,7 +48,7 @@ const Contact = () => {
               </div>
               
               <div className='contact-item'>
-                <span className='contact-icon'>📧</span>
+                <span className='contact-icon'><MdEmail /></span>
                 <div>
                   <h4>Email</h4>
                   <p>info@codox.com</p>
@@ -55,7 +56,7 @@ const Contact = () => {
               </div>
               
               <div className='contact-item'>
-                <span className='contact-icon'>📞</span>
+                <span className='contact-icon'><MdPhone /></span>
                 <div>
                   <h4>Phone</h4>
                   <p>+1 (123) 456-7890</p>
@@ -63,7 +64,7 @@ const Contact = () => {
               </div>
               
               <div className='contact-item'>
-                <span className='contact-icon'>⏰</span>
+                <span className='contact-icon'><MdAccessTime /></span>
                 <div>
                   <h4>Working Hours</h4>
                   <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
