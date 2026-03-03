@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Home from './pages/Home'
@@ -10,23 +10,37 @@ import FAQ from './pages/FAQ'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import Terms from './pages/Terms'
 import Footer from './components/Footer/Footer'
+import Preloader from './components/Preloader/Preloader'
 
 const App = () => {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1500)
+
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/services' element={<Services />} />
-        <Route path='/courses' element={<Courses />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/faq' element={<FAQ />} />
-        <Route path='/privacy' element={<PrivacyPolicy />} />
-        <Route path='/terms' element={<Terms />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <>
+      {loading && <Preloader />}
+      <Router>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/courses' element={<Courses />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/faq' element={<FAQ />} />
+          <Route path='/privacy' element={<PrivacyPolicy />} />
+          <Route path='/terms' element={<Terms />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </>
   )
 }
 
