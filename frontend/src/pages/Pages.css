@@ -1848,6 +1848,11 @@
   border: 2px solid #e9ecef;
 }
 
+.course-icon svg {
+  font-size: 60px;
+  color: #00ff48;
+}
+
 .course-detail-header h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 42px;
@@ -1871,6 +1876,17 @@
   font-size: 14px;
   color: #666;
   font-weight: 600;
+}
+
+.course-detail-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.course-detail-meta svg {
+  color: #00ff48;
+  font-size: 16px;
 }
 
 .course-detail-content {

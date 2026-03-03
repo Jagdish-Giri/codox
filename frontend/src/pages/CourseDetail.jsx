@@ -1,7 +1,7 @@
 import React from 'react'
 import './Pages.css'
 import { Link, useParams } from 'react-router-dom'
-import { FaArrowLeft, FaCheckCircle, FaProjectDiagram, FaClock } from 'react-icons/fa'
+import { FaArrowLeft, FaCheckCircle, FaProjectDiagram, FaClock, FaRocket, FaBolt, FaShapes, FaNodeJs, FaDatabase, FaFire, FaUserTie, FaChartBar, FaTrophy } from 'react-icons/fa'
 
 const CourseDetail = () => {
   const { id } = useParams()
@@ -15,7 +15,7 @@ const CourseDetail = () => {
       duration: "24 hours",
       category: "Frontend",
       description: "Master advanced React patterns and architectural best practices",
-      image: "🚀",
+      icon: FaRocket,
       topics: [
         "Higher Order Components (HOC)",
         "Render Props Pattern",
@@ -52,7 +52,7 @@ const CourseDetail = () => {
       duration: "32 hours",
       category: "Frontend",
       description: "Build production-ready full-stack web applications with Next.js",
-      image: "⚡",
+      icon: FaBolt,
       topics: [
         "Pages & Routing in Next.js",
         "Server-Side Rendering (SSR)",
@@ -89,7 +89,7 @@ const CourseDetail = () => {
       duration: "28 hours",
       category: "Frontend",
       description: "Learn TypeScript to write safer and better type-safe code",
-      image: "🔷",
+      icon: FaShapes,
       topics: [
         "TypeScript Basics & Types",
         "Interfaces & Type Aliases",
@@ -126,7 +126,7 @@ const CourseDetail = () => {
       duration: "30 hours",
       category: "Backend",
       description: "Build scalable REST APIs with Node.js and Express framework",
-      image: "🟢",
+      icon: FaNodeJs,
       topics: [
         "Node.js Fundamentals",
         "Express Framework",
@@ -163,7 +163,7 @@ const CourseDetail = () => {
       duration: "20 hours",
       category: "Backend",
       description: "Master database design and SQL fundamentals for any application",
-      image: "🗄️",
+      icon: FaDatabase,
       topics: [
         "Database Fundamentals",
         "Relational Model & Schema Design",
@@ -200,7 +200,7 @@ const CourseDetail = () => {
       duration: "48 hours",
       category: "FullStack",
       description: "Build complete web applications using MERN stack (MongoDB, Express, React, Node.js)",
-      image: "🔥",
+      icon: FaFire,
       topics: [
         "MERN Stack Fundamentals",
         "Frontend with React",
@@ -253,15 +253,17 @@ const CourseDetail = () => {
       <div className='course-detail-hero'>
         <Link to='/courses' className='back-link'><FaArrowLeft /> Back to Courses</Link>
         <div className='course-detail-header'>
-          <div className='course-icon'>{course.image}</div>
+          <div className='course-icon'>
+            {React.createElement(course.icon)}
+          </div>
           <div>
             <h1>{course.title}</h1>
             <p className='course-detail-subtitle'>{course.description}</p>
             <div className='course-detail-meta'>
-              <span>👨‍🏫 {course.instructor}</span>
-              <span>📊 {course.level}</span>
-              <span>⏱️ {course.duration}</span>
-              <span>🏆 {course.category}</span>
+              <span><FaUserTie /> {course.instructor}</span>
+              <span><FaChartBar /> {course.level}</span>
+              <span><FaClock /> {course.duration}</span>
+              <span><FaTrophy /> {course.category}</span>
             </div>
           </div>
         </div>
