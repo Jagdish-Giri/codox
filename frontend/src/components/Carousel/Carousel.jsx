@@ -6,6 +6,10 @@ import { FaArrowRight } from "react-icons/fa";
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const handleCourseClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   const courses = [
     { id: 1, title: 'Course title' },
     { id: 2, title: 'Course title' },
@@ -53,7 +57,7 @@ const Carousel = () => {
               <div className="course-image"></div>
               <div className="course-footer">
                 <h3>{course.title}</h3>
-                <button className="play-btn">Play</button>
+                <button className="play-btn" onClick={handleCourseClick}>Play</button>
               </div>
             </div>
           ))}

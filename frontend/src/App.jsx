@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -13,6 +13,16 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import Terms from './pages/Terms'
 import Footer from './components/Footer/Footer'
 import Preloader from './components/Preloader/Preloader'
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation()
+  
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  
+  return null
+}
 
 const App = () => {
   const [loading, setLoading] = useState(true)
@@ -29,6 +39,7 @@ const App = () => {
     <>
       {loading && <Preloader />}
       <Router>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
