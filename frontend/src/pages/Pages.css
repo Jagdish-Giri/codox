@@ -1,3 +1,157 @@
+
+/* 404 Not Found Page Styles */
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px 40px;
+  background: #ffffff;
+}
+
+.not-found-content {
+  max-width: 760px;
+  width: 100%;
+  text-align: center;
+}
+
+.not-found-emoji {
+  font-size: 90px;
+  line-height: 1;
+  margin-bottom: 20px;
+  animation: floatEmoji 2.8s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+}
+
+@keyframes floatEmoji {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+  }
+}
+
+.not-found-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 140px;
+  font-weight: 900;
+  color: #000;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.not-found-heading {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 34px;
+  color: #000;
+  margin: 10px 0 14px;
+  font-weight: 700;
+}
+
+.not-found-description {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  color: #666;
+  margin: 0 auto 36px;
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.not-found-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.not-found-btn {
+  padding: 12px 26px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border: 2px solid #00ff48;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+}
+
+.not-found-btn.primary {
+  background: #00ff48;
+  color: #000;
+}
+
+.not-found-btn.primary:hover {
+  background: #00df40;
+  border-color: #00df40;
+  transform: translateY(-2px);
+}
+
+.not-found-btn.secondary {
+  background: #ffffff;
+  color: #00ff48;
+}
+
+.not-found-btn.secondary:hover {
+  background: rgba(0, 255, 72, 0.08);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .not-found-page {
+    padding: 90px 16px 30px;
+  }
+
+  .not-found-emoji {
+    font-size: 72px;
+  }
+
+  .not-found-title {
+    font-size: 100px;
+    letter-spacing: -2px;
+  }
+
+  .not-found-heading {
+    font-size: 26px;
+  }
+
+  .not-found-description {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .not-found-emoji {
+    font-size: 62px;
+  }
+
+  .not-found-title {
+    font-size: 76px;
+  }
+
+  .not-found-heading {
+    font-size: 20px;
+  }
+
+  .not-found-description {
+    font-size: 14px;
+  }
+
+  .not-found-actions {
+    flex-direction: column;
+  }
+
+  .not-found-btn {
+    width: 100%;
+  }
+}
 /* Pages.css - Styling for all pages with light theme and green accent */
 
 /* COURSES PAGE - LIGHT PROFESSIONAL THEME */
@@ -24,6 +178,22 @@
   letter-spacing: -1px;
   line-height: 1.1;
   text-decoration: none;
+}
+
+.courses-accent-word {
+  position: relative;
+  display: inline-block;
+}
+
+.courses-accent-word::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 6px;
+  background: #00ff48;
+  border-radius: 999px;
 }
 
 .courses-hero p,
@@ -82,12 +252,12 @@
 
 .filter-buttons {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .filter-btn {
-  padding: 10px 24px;
+  padding: 8px 16px;
   border: 2px solid #e9ecef;
   background: #ffffff;
   color: #000;
@@ -96,7 +266,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .filter-btn:hover {
@@ -954,11 +1124,14 @@
   }
 
   .filter-buttons {
-    flex-direction: column;
+    flex-direction: row;
+    gap: 8px;
   }
 
   .filter-btn {
-    width: 100%;
+    width: auto;
+    padding: 7px 14px;
+    font-size: 12px;
   }
 
   .why-choose-grid {
@@ -2342,5 +2515,863 @@
   .back-link {
     font-size: 12px;
     margin-bottom: 20px;
+  }
+}
+
+/* FORGOT PASSWORD PAGE */
+.forgot-password-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.forgot-password-box {
+  background: #ffffff;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+}
+
+.forgot-password-box h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.forgot-password-subtitle {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.forgot-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.back-to-login {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.back-to-login a {
+  color: #00ff48;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid #00ff48;
+  transition: all 0.3s ease;
+}
+
+.back-to-login a:hover {
+  color: #00dd3a;
+}
+
+.forgot-password-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.forgot-password-info h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+.info-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.step {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border-left: 4px solid #00ff48;
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  background: #f0f0f0;
+  transform: translateX(5px);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background: linear-gradient(135deg, #00ff48 0%, #00dd3a 100%);
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+}
+
+.step-content h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 0.3rem 0;
+}
+
+.step-content p {
+  color: #666;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .forgot-password-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .forgot-password-box {
+    padding: 2.5rem 2rem;
+  }
+
+  .forgot-password-box h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .forgot-password-wrapper {
+    gap: 2rem;
+  }
+
+  .forgot-password-box {
+    padding: 2rem 1.5rem;
+  }
+
+  .forgot-password-box h2 {
+    font-size: 24px;
+  }
+
+  .forgot-password-subtitle {
+    font-size: 13px;
+  }
+
+  .forgot-password-info h3 {
+    font-size: 20px;
+  }
+
+  .step {
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+
+  .step-number {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .step-content h4 {
+    font-size: 14px;
+  }
+
+  .step-content p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .forgot-password-box {
+    padding: 1.5rem 1rem;
+  }
+
+  .forgot-password-box h2 {
+    font-size: 20px;
+  }
+
+  .forgot-password-subtitle {
+    font-size: 12px;
+  }
+
+  .forgot-password-info h3 {
+    font-size: 18px;
+  }
+
+  .info-steps {
+    gap: 1rem;
+  }
+
+  .step {
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .step-content h4 {
+    font-size: 13px;
+  }
+
+  .step-content p {
+    font-size: 11px;
+  }
+}
+
+/* PATHS PAGE - GAMIFICATION */
+.user-stats-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  border: 2px solid #000;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: #00ff48;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  min-width: 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ff48;
+}
+
+.stat-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.stat-info {
+  flex: 1;
+}
+
+.stat-info h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-info p {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin: 0.3rem 0 0 0;
+}
+
+/* Paths Section */
+.paths-section {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.paths-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.paths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.path-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.path-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  border-color: #00ff48;
+}
+
+.path-card.selected {
+  border-color: #00ff48;
+  background: #ffffff;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+.path-content {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.path-content h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.path-description {
+  color: #666;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.path-stats-row {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.path-stats-row .stat {
+  font-size: 12px;
+  color: #666;
+  background: #f5f5f5;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.path-stats-row .stat svg {
+  width: 14px;
+  height: 14px;
+  color: #00ff48;
+}
+
+.path-stats-row .stat:hover {
+  background: #e9e9e9;
+  border: 1px solid #00ff48;
+}
+
+.difficulty-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.5px;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.difficulty-badge svg {
+  width: 16px;
+  height: 16px;
+}
+
+.difficulty-badge[data-difficulty="Beginner"] {
+  background: #ffffff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.difficulty-badge[data-difficulty="Intermediate"] {
+  background: #000;
+  color: #ffffff;
+  border: 1px solid #00ff48;
+}
+
+.difficulty-badge[data-difficulty="Advanced"] {
+  background: #00ff48;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.path-rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.stars {
+  display: flex;
+  gap: 0.2rem;
+  font-size: 14px;
+}
+
+.stars .filled {
+  color: #ffd700;
+}
+
+.stars .empty {
+  color: #ccc;
+}
+
+.rating-text {
+  font-size: 12px;
+  color: #666;
+}
+
+.path-progress {
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #000;
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+  background: #00ff48 !important;
+}
+
+.xp-info {
+  font-size: 11px;
+  color: #999;
+  margin-top: 0.3rem;
+}
+
+.level-info {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.level-badge {
+  display: inline-block;
+  background: #00ff48;
+  color: #000;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  border: 1px solid #000;
+}
+
+.achievements-list {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.achievements-list h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 12px;
+  color: #000;
+  margin: 0 0 0.8rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.achievement-badge {
+  background: #00ff48;
+  color: #000;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  border: 1px solid #000;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-badge:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.path-btn {
+  background: #00ff48;
+  color: #000;
+  padding: 0.9rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #000;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  display: block;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.path-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.path-btn:active {
+  transform: scale(0.95);
+}
+
+/* Leaderboard Section */
+.leaderboard-section {
+  max-width: 1200px;
+  margin: 4rem auto 0;
+  padding: 0 1rem;
+}
+
+.leaderboard-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.leaderboard {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid #e9ecef;
+}
+
+.leaderboard-entry {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid #000;
+  transition: all 0.3s ease;
+}
+
+.leaderboard-entry:last-child {
+  border-bottom: none;
+}
+
+.leaderboard-entry:hover {
+  background: #f9f9f9;
+  transform: translateX(5px);
+  border-bottom-color: #00ff48;
+}
+
+.rank-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 50px;
+  background: #00ff48;
+  border-radius: 50%;
+  color: #000;
+  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  border: 2px solid #000;
+}
+
+.entry-info {
+  flex: 1;
+}
+
+.entry-info h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.entry-info p {
+  font-size: 13px;
+  color: #666;
+  margin: 0.3rem 0 0 0;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.entry-info p svg {
+  width: 14px;
+  height: 14px;
+}
+
+.trophy-icon {
+  font-size: 2rem;
+  color: #ffd700;
+}
+
+.medal-icon {
+  font-size: 1.8rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .user-stats-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .paths-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .paths-title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-stats-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
+
+  .stat-info h4 {
+    font-size: 10px;
+  }
+
+  .stat-info p {
+    font-size: 20px;
+  }
+
+  .paths-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .paths-title {
+    font-size: 32px;
+    margin-bottom: 2rem;
+  }
+
+  .path-content {
+    padding: 1.5rem;
+    gap: 0.8rem;
+  }
+
+  .path-content h3 {
+    font-size: 18px;
+  }
+
+  .path-description {
+    font-size: 12px;
+  }
+
+  .leaderboard-entry {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .rank-badge {
+    min-width: 46px;
+    height: 46px;
+    font-size: 14px;
+  }
+
+  .entry-info h4 {
+    font-size: 14px;
+  }
+
+  .entry-info p {
+    font-size: 12px;
+  }
+
+  .trophy-icon {
+    font-size: 1.6rem;
+  }
+
+  .medal-icon {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-stats-section {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .stat-card {
+    padding: 0.8rem;
+  }
+
+  .stat-icon {
+    font-size: 1.8rem;
+    min-width: 50px;
+  }
+
+  .stat-info h4 {
+    font-size: 9px;
+  }
+
+  .stat-info p {
+    font-size: 18px;
+  }
+
+  .paths-title {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+  }
+
+  .path-content {
+    padding: 1.2rem;
+    gap: 0.6rem;
+  }
+
+  .path-content h3 {
+    font-size: 16px;
+  }
+
+  .path-description {
+    font-size: 11px;
+  }
+
+  .difficulty-badge {
+    font-size: 11px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .stars {
+    font-size: 12px;
+  }
+
+  .rating-text {
+    font-size: 11px;
+  }
+
+  .level-badge {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+  }
+
+  .path-btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 13px;
+  }
+
+  .leaderboard-section h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+  }
+
+  .leaderboard {
+    padding: 1rem;
+  }
+
+  .leaderboard-entry {
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+
+  .rank-badge {
+    min-width: 40px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .entry-info h4 {
+    font-size: 13px;
+  }
+
+  .entry-info p {
+    font-size: 11px;
   }
 }

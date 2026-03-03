@@ -8,10 +8,13 @@ import Courses from './pages/Courses'
 import CourseDetail from './pages/CourseDetail'
 import Contact from './pages/Contact'
 import FAQ from './pages/FAQ'
+import Paths from './pages/Paths'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import ForgotPassword from './pages/ForgotPassword'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import Terms from './pages/Terms'
+import NotFound from './pages/NotFound'
 import Footer from './components/Footer/Footer'
 import Preloader from './components/Preloader/Preloader'
 
@@ -48,12 +51,15 @@ const App = () => {
           <Route path='/services' element={<Services />} />
           <Route path='/courses' element={<Courses />} />
           <Route path='/course/:id' element={<CourseDetail />} />
+          <Route path='/paths' element={<Paths />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/faq' element={<FAQ />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
+          <Route path='/forgot-password' element={<ForgotPassword />} />
           <Route path='/privacy' element={<PrivacyPolicy />} />
           <Route path='/terms' element={<Terms />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
         <Footer />
       </Router>

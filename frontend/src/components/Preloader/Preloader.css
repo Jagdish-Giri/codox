@@ -48,6 +48,13 @@
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
+.laptop-screen::before,
+.laptop-screen::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
 .screen-content {
   display: flex;
   flex-direction: column;
@@ -162,23 +169,52 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .laptop-screen {
-    width: 420px;
-    height: 280px;
+    width: 430px;
+    height: 560px;
+    border-width: 10px;
+    border-radius: 24px;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.18);
+  }
+
+  .laptop-screen::before {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #444;
+    border-radius: 50%;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .laptop-screen::after {
+    display: block;
+    width: 120px;
+    height: 8px;
+    border-radius: 0 0 10px 10px;
+    background: #000;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .laptop-base {
-    width: 470px;
+    display: none;
+  }
+
+  .screen-content {
+    gap: 40px;
+    padding: 20px;
   }
 
   .letter {
-    font-size: 44px;
-    gap: 6px;
+    font-size: 48px;
   }
 
   .loading-info {
-    width: 320px;
+    width: 300px;
   }
 
   .progress-text {
@@ -186,28 +222,43 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .laptop-screen {
-    width: 320px;
-    height: 220px;
+    width: 285px;
+    height: 560px;
+    border-width: 9px;
+    border-radius: 26px;
   }
 
-  .laptop-base {
-    width: 360px;
-    height: 10px;
+  .laptop-screen::before {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    top: 10px;
+    box-shadow: 0 0 0 2px #2a2a2a;
   }
 
-  .screen-content {
-    gap: 28px;
+  .laptop-screen::after {
+    width: 70px;
+    height: 5px;
+    border-radius: 10px;
+    border: none;
+    background: #2f2f2f;
+    bottom: 10px;
   }
 
   .letter {
-    font-size: 36px;
-    gap: 4px;
+    font-size: 40px;
+  }
+
+  .screen-content {
+    gap: 34px;
+    padding: 34px 18px 28px;
   }
 
   .loading-info {
-    width: 260px;
+    width: 220px;
   }
 
   .progress-bar-container {

@@ -15,6 +15,7 @@ const Header = () => {
             <ul className='navbarlinksforpc'>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/courses'>Courses</Link></li>
+                <li><Link to='/paths'>Paths</Link></li>
                 <li><Link to='/services'>Services</Link></li>
                 <li><Link to='/about'>About</Link></li>
             </ul>
@@ -35,6 +36,7 @@ const Header = () => {
     <ul className='navbarlinksformobile'>
                 <li><Link to='/' onClick={() => setIsOpen(false)}>Home</Link></li>
                 <li><Link to='/courses' onClick={() => setIsOpen(false)}>Courses</Link></li>
+                <li><Link to='/paths' onClick={() => setIsOpen(false)}>Paths</Link></li>
                 <li><Link to='/services' onClick={() => setIsOpen(false)}>Services</Link></li>
                 <li><Link to='/about' onClick={() => setIsOpen(false)}>About</Link></li>
                  <div className='signupbuttondiv'>

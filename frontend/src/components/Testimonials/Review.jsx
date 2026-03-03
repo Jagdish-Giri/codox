@@ -6,7 +6,7 @@ const Review = () => {
   return (
     <div className='review'>
         <div className='reviewtextcontainer'>
-            <h1 className='reviewtext'>Our Reviews</h1>
+            <h1 className='reviewtext'>Our <span className="underline">Reviews</span></h1>
             <p>See how our courses have helped others</p>
         </div>
         <div className='reviewcardcontainer'>

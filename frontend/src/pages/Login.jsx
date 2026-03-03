@@ -126,7 +126,7 @@ const Login = () => {
                   />
                   <label htmlFor='remember'>Remember me</label>
                 </div>
-                <a href='#' className='forgot-password'>Forgot Password?</a>
+                <Link to='/forgot-password' className='forgot-password'>Forgot Password?</Link>
               </div>
 
               {/* Submit Button */}

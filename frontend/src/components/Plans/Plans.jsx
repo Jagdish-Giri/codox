@@ -6,7 +6,7 @@ const Plans = () => {
   return (
     <div>
         <div className='plantextcontainer'>
-            <h1 className="plantext">Our Plans</h1>
+            <h1 className="plantext">Our <span className="underline">Plans</span></h1>
             <p>Explore our plans and find what fits you best!</p>
         </div>
         <div className='plancards'>
