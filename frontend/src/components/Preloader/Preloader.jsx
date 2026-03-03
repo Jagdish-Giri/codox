@@ -1,42 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import './Preloader.css'
-import { FaUsb } from 'react-icons/fa'
 
 const Preloader = () => {
   const [loading, setLoading] = useState(true)
   const [progress, setProgress] = useState(0)
-  const [connected, setConnected] = useState(false)
 
   useEffect(() => {
-    // Connection animation delay
-    const connectTimer = setTimeout(() => {
-      setConnected(true)
-    }, 500)
+    // Progress animation
+    const progressInterval = setInterval(() => {
+      setProgress(prev => {
+        if (prev >= 100) {
+          clearInterval(progressInterval)
+          return 100
+        }
+        return prev + 1.67 // 100/60 for 5 second duration
+      })
+    }, 60)
 
-    // Progress animation starts after connection
-    const progressTimer = setTimeout(() => {
-      const progressInterval = setInterval(() => {
-        setProgress(prev => {
-          if (prev >= 100) {
-            clearInterval(progressInterval)
-            return 100
-          }
-          return prev + 2.5
-        })
-      }, 60) // 60ms * 40 steps = 2.4 seconds
-
-      return () => clearInterval(progressInterval)
-    }, 800)
-
-    // Hide preloader after 3.5 seconds total
-    const hideTimer = setTimeout(() => {
+    // Hide preloader after 5 seconds
+    const timer = setTimeout(() => {
       setLoading(false)
-    }, 3500)
+    }, 5000)
 
     return () => {
-      clearTimeout(connectTimer)
-      clearTimeout(progressTimer)
-      clearTimeout(hideTimer)
+      clearInterval(progressInterval)
+      clearTimeout(timer)
     }
   }, [])
 
@@ -45,30 +33,24 @@ const Preloader = () => {
   return (
     <div className='preloader'>
       <div className='preloader-content'>
-        <div className='laptop-container'>
+        <div className='loader-box'>
           <div className='laptop-screen'>
-            <div className={`usb-icon ${connected ? 'connected' : ''}`}>
-              <FaUsb />
-            </div>
-            <div className={`loading-screen ${connected ? 'show' : ''}`}>
-              <div className='codox-logo'>
+            <div className='screen-content'>
+              <div className='logo-reveal'>
                 <span className='letter'>C</span>
                 <span className='letter'>O</span>
                 <span className='letter'>D</span>
                 <span className='letter'>O</span>
                 <span className='letter'>X</span>
               </div>
-              <div className='loading-details'>
+              <div className='loading-info'>
                 <div className='progress-bar-container'>
                   <div 
                     className='progress-bar-fill' 
                     style={{ width: `${progress}%` }}
                   ></div>
                 </div>
-                <div className='loading-stats'>
-                  <span className='loading-text'>Loading files...</span>
-                  <span className='progress-percentage'>{progress}%</span>
-                </div>
+                <div className='progress-text'>{Math.round(progress)}%</div>
               </div>
             </div>
           </div>
