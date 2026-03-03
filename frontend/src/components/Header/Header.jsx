@@ -19,8 +19,8 @@ const Header = () => {
                 <li><Link to='/about'>About</Link></li>
             </ul>
             <div className='signupbuttondiv'>
-                    <Link to='/signup' className='signupbuttonpc-link'>
-                      <button className='signupbuttonpc'>Sign Up</button>
+                    <Link to='/login' className='signupbuttonpc-link'>
+                      <button className='signupbuttonpc'>Login</button>
                     </Link>
                  </div>
                  <div className='menu'onClick={() => setIsOpen(!isOpen)}>
@@ -38,8 +38,8 @@ const Header = () => {
                 <li><Link to='/services' onClick={() => setIsOpen(false)}>Services</Link></li>
                 <li><Link to='/about' onClick={() => setIsOpen(false)}>About</Link></li>
                  <div className='signupbuttondiv'>
-                    <Link to='/signup' className='signupbutton-link' onClick={() => setIsOpen(false)}>
-                      <button className='signupbutton'>Sign Up</button>
+                    <Link to='/login' className='signupbutton-link' onClick={() => setIsOpen(false)}>
+                      <button className='signupbutton'>Login</button>
                     </Link>
                  </div>
             </ul>
