@@ -15,7 +15,8 @@ const Courses = () => {
       instructor: "Sarah Chen",
       level: "Advanced",
       duration: "24 hours",
-      category: "Frontend"
+      category: "Frontend",
+      description: "Master advanced React patterns and best practices"
     },
     {
       id: 2,
@@ -23,7 +24,8 @@ const Courses = () => {
       instructor: "Alex Rodriguez",
       level: "Intermediate",
       duration: "32 hours",
-      category: "Frontend"
+      category: "Frontend",
+      description: "Build production-ready web applications with Next.js"
     },
     {
       id: 3,
@@ -31,7 +33,8 @@ const Courses = () => {
       instructor: "Jordan Lee",
       level: "Intermediate",
       duration: "28 hours",
-      category: "Frontend"
+      category: "Frontend",
+      description: "Learn TypeScript to write safer and better code"
     },
     {
       id: 4,
@@ -39,7 +42,8 @@ const Courses = () => {
       instructor: "Mike Johnson",
       level: "Intermediate",
       duration: "30 hours",
-      category: "Backend"
+      category: "Backend",
+      description: "Build scalable REST APIs with Node.js and Express"
     },
     {
       id: 5,
@@ -47,7 +51,8 @@ const Courses = () => {
       instructor: "Emma Watson",
       level: "Beginner",
       duration: "20 hours",
-      category: "Backend"
+      category: "Backend",
+      description: "Master database design and SQL fundamentals"
     },
     {
       id: 6,
@@ -55,7 +60,62 @@ const Courses = () => {
       instructor: "David Kim",
       level: "Advanced",
       duration: "48 hours",
-      category: "FullStack"
+      category: "FullStack",
+      description: "Build complete web applications using MERN stack"
+    },
+    {
+      id: 7,
+      title: "Vue.js Fundamentals",
+      instructor: "Lisa Anderson",
+      level: "Beginner",
+      duration: "22 hours",
+      category: "Frontend",
+      description: "Learn Vue.js from scratch and build interactive UIs"
+    },
+    {
+      id: 8,
+      title: "Python for Data Science",
+      instructor: "James Wilson",
+      level: "Intermediate",
+      duration: "40 hours",
+      category: "Backend",
+      description: "Use Python for data analysis and machine learning"
+    },
+    {
+      id: 9,
+      title: "AWS Cloud Deployment",
+      instructor: "Robert Brown",
+      level: "Advanced",
+      duration: "35 hours",
+      category: "FullStack",
+      description: "Deploy and scale applications on AWS cloud"
+    },
+    {
+      id: 10,
+      title: "GraphQL API Development",
+      instructor: "Emily Taylor",
+      level: "Advanced",
+      duration: "26 hours",
+      category: "Backend",
+      description: "Build modern APIs with GraphQL and Apollo Server"
+    },
+    {
+      id: 11,
+      title: "React Native Mobile App",
+      instructor: "Marcus Johnson",
+      level: "Intermediate",
+      duration: "38 hours",
+      category: "Frontend",
+      description: "Create native mobile apps using React Native"
+    },
+    {
+      id: 12,
+      title: "DevOps & Docker",
+      instructor: "Priya Sharma",
+      level: "Advanced",
+      duration: "32 hours",
+      category: "FullStack",
+      description: "Master containerization and DevOps practices"
     }
   ];
 
@@ -104,21 +164,29 @@ const Courses = () => {
         <section className='courses-grid-section'>
           <h2>Featured Courses</h2>
           <div className='courses-grid'>
-            {filteredCourses.map(course => (
-              <div key={course.id} className='course-card'>
-                <div className='course-details'>
-                  <h3>{course.title}</h3>
-                  <div className='course-meta'>
-                    <span className='course-level'>{course.level}</span>
-                    <span className='course-duration'>{course.duration}</span>
+            {filteredCourses.length > 0 ? (
+              filteredCourses.map(course => (
+                <div key={course.id} className='course-card'>
+                  <div className='course-level-badge'>{course.level}</div>
+                  <div className='course-header'>
+                    <h3>{course.title}</h3>
                   </div>
-                  <div className='course-instructor'>
-                    <p>By {course.instructor}</p>
+                  <p className='course-description'>{course.description}</p>
+                  <div className='course-info'>
+                    <span className='course-duration'>⏱️ {course.duration}</span>
+                    <span className='course-category'>{course.category}</span>
                   </div>
-                  <button className='course-btn'>View Course</button>
+                  <div className='course-instructor-info'>
+                    <p>By <strong>{course.instructor}</strong></p>
+                  </div>
+                  <button className='course-btn'>Enroll Now</button>
                 </div>
+              ))
+            ) : (
+              <div className='no-courses'>
+                <p>No courses found. Try a different search or filter.</p>
               </div>
-            ))}
+            )}
           </div>
         </section>
 
