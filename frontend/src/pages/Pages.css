@@ -14,7 +14,8 @@
   border-bottom: 2px solid #00ff48;
 }
 
-.courses-hero h1 {
+.courses-hero h1,
+.courses-hero-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 60px;
   margin-bottom: 20px;
@@ -22,13 +23,11 @@
   font-weight: 900;
   letter-spacing: -1px;
   line-height: 1.1;
+  text-decoration: none;
 }
 
-.courses-hero .highlight {
-  color: #00ff48;
-}
-
-.courses-hero p {
+.courses-hero p,
+.courses-hero-subtitle {
   font-size: 18px;
   color: #666;
   max-width: 600px;
@@ -771,12 +770,14 @@
     padding: 60px 20px 40px;
   }
 
-  .courses-hero h1 {
+  .courses-hero h1,
+  .courses-hero-title {
     font-size: 44px;
     margin-bottom: 15px;
   }
 
-  .courses-hero p {
+  .courses-hero p,
+  .courses-hero-subtitle {
     font-size: 16px;
   }
 
@@ -919,12 +920,14 @@
     padding: 50px 20px 35px;
   }
 
-  .courses-hero h1 {
+  .courses-hero h1,
+  .courses-hero-title {
     font-size: 36px;
     margin-bottom: 12px;
   }
 
-  .courses-hero p {
+  .courses-hero p,
+  .courses-hero-subtitle {
     font-size: 15px;
   }
 

@@ -68,8 +68,8 @@ const Courses = () => {
   return (
     <div className='courses-page'>
       <div className='courses-hero'>
-        <h1>Learn from <span className='highlight'>Experts</span></h1>
-        <p>Master the tools and skills used by industry leaders</p>
+        <h1 className='courses-hero-title'>Our Courses</h1>
+        <p className='courses-hero-subtitle'>Master the tools and skills used by industry leaders</p>
       </div>
       
       <div className='courses-content'>
