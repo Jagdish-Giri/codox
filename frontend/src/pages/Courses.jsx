@@ -4,56 +4,66 @@ import Carousel from '../components/Carousel/Carousel'
 import Plans from '../components/Plans/Plans'
 
 const Courses = () => {
+  const [searchTerm, setSearchTerm] = React.useState('');
+  const [selectedFilter, setSelectedFilter] = React.useState('All');
+
   const coursesList = [
     {
       id: 1,
       title: "Advanced React Patterns",
       instructor: "Sarah Chen",
-      image: "🎨",
       level: "Advanced",
-      duration: "24 hours"
+      duration: "24 hours",
+      category: "Frontend"
     },
     {
       id: 2,
       title: "Next.js & Modern Web Dev",
       instructor: "Alex Rodriguez",
-      image: "⚡",
       level: "Intermediate",
-      duration: "32 hours"
+      duration: "32 hours",
+      category: "Frontend"
     },
     {
       id: 3,
       title: "TypeScript Mastery",
       instructor: "Jordan Lee",
-      image: "📘",
       level: "Intermediate",
-      duration: "28 hours"
+      duration: "28 hours",
+      category: "Frontend"
     },
     {
       id: 4,
       title: "Node.js Backend API",
       instructor: "Mike Johnson",
-      image: "🔧",
       level: "Intermediate",
-      duration: "30 hours"
+      duration: "30 hours",
+      category: "Backend"
     },
     {
       id: 5,
       title: "Database Design & SQL",
       instructor: "Emma Watson",
-      image: "🗄️",
       level: "Beginner",
-      duration: "20 hours"
+      duration: "20 hours",
+      category: "Backend"
     },
     {
       id: 6,
       title: "Full Stack MERN",
       instructor: "David Kim",
-      image: "🚀",
       level: "Advanced",
-      duration: "48 hours"
+      duration: "48 hours",
+      category: "FullStack"
     }
   ];
+
+  const filteredCourses = coursesList.filter(course => {
+    const matchesSearch = course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         course.instructor.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesFilter = selectedFilter === 'All' || course.category === selectedFilter;
+    return matchesSearch && matchesFilter;
+  });
 
   return (
     <div className='courses-page'>
@@ -63,12 +73,38 @@ const Courses = () => {
       </div>
       
       <div className='courses-content'>
+        {/* Search and Filter Section */}
+        <div className='courses-search-section'>
+          <div className='search-bar'>
+            <input
+              type='text'
+              placeholder='Search courses or instructors...'
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className='search-input'
+            />
+            <span className='search-icon'>🔍</span>
+          </div>
+          
+          <div className='filter-buttons'>
+            {['All', 'Frontend', 'Backend', 'FullStack'].map(filter => (
+              <button
+                key={filter}
+                className={`filter-btn ${selectedFilter === filter ? 'active' : ''}`}
+                onClick={() => setSelectedFilter(filter)}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Courses Grid */}
         <section className='courses-grid-section'>
           <h2>Featured Courses</h2>
           <div className='courses-grid'>
-            {coursesList.map(course => (
+            {filteredCourses.map(course => (
               <div key={course.id} className='course-card'>
-                <div className='course-image'>{course.image}</div>
                 <div className='course-details'>
                   <h3>{course.title}</h3>
                   <div className='course-meta'>
@@ -85,26 +121,23 @@ const Courses = () => {
           </div>
         </section>
 
+        {/* Why Choose Section */}
         <section className='why-choose-section'>
-          <h2>Why Choose Our Courses</h2>
-          <div className='features-list'>
-            <div className='feature'>
-              <span className='feature-icon'>✨</span>
+          <h2>Why Our Courses</h2>
+          <div className='why-choose-grid'>
+            <div className='why-item'>
               <h4>Expert Instructors</h4>
-              <p>Learn from industry professionals with years of experience</p>
+              <p>Learn from industry professionals with years of real-world experience</p>
             </div>
-            <div className='feature'>
-              <span className='feature-icon'>🎯</span>
+            <div className='why-item'>
               <h4>Hands-on Projects</h4>
-              <p>Build real-world applications with best practices</p>
+              <p>Build real-world applications with best practices and modern tools</p>
             </div>
-            <div className='feature'>
-              <span className='feature-icon'>🌍</span>
+            <div className='why-item'>
               <h4>Lifetime Access</h4>
               <p>Access course materials forever with regular updates</p>
             </div>
-            <div className='feature'>
-              <span className='feature-icon'>📜</span>
+            <div className='why-item'>
               <h4>Certification</h4>
               <p>Get recognized certificates upon course completion</p>
             </div>
