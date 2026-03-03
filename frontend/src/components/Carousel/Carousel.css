@@ -20,7 +20,7 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.course-card {
+.carousel-card {
   min-width: calc(33% - 1rem);
   background-color: #d9d9d9;
   border-radius: 15px;
@@ -30,7 +30,7 @@
   margin-top: 15px;
 }
 
-.course-card:hover {
+.carousel-card:hover {
   transform: translateY(-10px);
 }
 
@@ -128,11 +128,11 @@
   .carousel-track {
     gap: 1rem;
   }
-  
-  .course-card {
+
+  .carousel-card {
     min-width: calc(50% - 0.5rem);
   }
-  
+
   .carouseltoptext {
     font-size: 50px;
   }
@@ -166,7 +166,7 @@
     padding: 0 20px;
   }
   
-  .course-card {
+  .carousel-card {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   }
 }
@@ -177,7 +177,7 @@
     margin-top: 80px;
   }
   
-  .course-card {
+  .carousel-card {
     min-width: 100%;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   }

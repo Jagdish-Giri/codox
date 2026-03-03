@@ -49,7 +49,7 @@ const Carousel = () => {
           style={{ transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)` }}
         >
           {courses.map((course) => (
-            <div key={course.id} className="course-card">
+            <div key={course.id} className="carousel-card">
               <div className="course-image"></div>
               <div className="course-footer">
                 <h3>{course.title}</h3>
