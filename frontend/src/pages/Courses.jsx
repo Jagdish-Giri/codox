@@ -102,28 +102,6 @@ const Courses = () => {
         </div>
 
         {/* Courses Grid */}
-        <section className='courses-grid-section'>
-          <h2>Featured Courses</h2>
-          <div className='courses-grid'>
-            {filteredCourses.map(course => (
-              <div key={course.id} className='course-card'>
-                <div className='course-details'>
-                  <h3>{course.title}</h3>
-                  <div className='course-meta'>
-                    <span className='course-level'>{course.level}</span>
-                    <span className='course-duration'>{course.duration}</span>
-                  </div>
-                  <div className='course-instructor'>
-                    <p>By {course.instructor}</p>
-                  </div>
-                  <Link to={`/course/${course.id}`} className='course-btn'>View Course</Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Why Choose Section */}
         <section className='why-choose-section'>
           <h2>Why Our Courses</h2>
           <div className='why-choose-grid'>
@@ -143,6 +121,28 @@ const Courses = () => {
               <h4>Certification</h4>
               <p>Get recognized certificates upon course completion</p>
             </div>
+          </div>
+        </section>
+
+        {/* Featured Courses */}
+        <section className='courses-grid-section'>
+          <h2>Featured Courses</h2>
+          <div className='courses-grid'>
+            {filteredCourses.map(course => (
+              <div key={course.id} className='course-card'>
+                <div className='course-details'>
+                  <h3>{course.title}</h3>
+                  <div className='course-meta'>
+                    <span className='course-level'>{course.level}</span>
+                    <span className='course-duration'>{course.duration}</span>
+                  </div>
+                  <div className='course-instructor'>
+                    <p>By {course.instructor}</p>
+                  </div>
+                  <Link to={`/course/${course.id}`} className='course-btn'>View Course</Link>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </div>
