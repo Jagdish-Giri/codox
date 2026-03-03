@@ -7,6 +7,7 @@ import Services from './pages/Services'
 import Courses from './pages/Courses'
 import Contact from './pages/Contact'
 import FAQ from './pages/FAQ'
+import Signup from './pages/Signup'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import Terms from './pages/Terms'
 import Footer from './components/Footer/Footer'
@@ -34,8 +35,7 @@ const App = () => {
           <Route path='/services' element={<Services />} />
           <Route path='/courses' element={<Courses />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/faq' element={<FAQ />} />
-          <Route path='/privacy' element={<PrivacyPolicy />} />
+          <Route path='/faq' element={<FAQ />} />        <Route path='/signup' element={<Signup />} />          <Route path='/privacy' element={<PrivacyPolicy />} />
           <Route path='/terms' element={<Terms />} />
         </Routes>
         <Footer />

@@ -51,6 +51,13 @@ li{
     text-decoration: none;
     color: inherit;
 }
+
+.signupbuttonpc-link,
+.signupbutton-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .signupbuttondiv{
     justify-content: space-between;
 }

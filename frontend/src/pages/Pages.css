@@ -1190,3 +1190,409 @@
     padding-left: 20px;
   }
 }
+
+/* SIGNUP PAGE */
+.signup-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.signup-box {
+  background: #f8f9fa;
+  padding: 50px;
+  border-radius: 15px;
+  border: 2px solid #e9ecef;
+}
+
+.signup-box h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.signup-subtitle {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.success-message {
+  background: #e8f5e9;
+  border: 2px solid #4caf50;
+  color: #2e7d32;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  text-align: center;
+  animation: slideDown 0.3s ease;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  font-size: 20px;
+  color: #666;
+  pointer-events: none;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px 14px 50px;
+  font-size: 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  background: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #00ff48;
+  box-shadow: 0 0 0 3px rgba(0, 255, 72, 0.1);
+}
+
+.form-group input.error {
+  border-color: #f44336;
+  box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.1);
+}
+
+.error-text {
+  font-size: 12px;
+  color: #f44336;
+  font-weight: 600;
+}
+
+.terms-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.terms-checkbox input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-top: 2px;
+  accent-color: #00ff48;
+}
+
+.terms-checkbox label {
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.terms-checkbox a {
+  color: #00ff48;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.terms-checkbox a:hover {
+  text-decoration: underline;
+  color: #00dd3a;
+}
+
+.submit-btn {
+  padding: 14px 24px;
+  background: #00ff48;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: #00dd3a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 255, 72, 0.3);
+}
+
+.login-link {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.login-link a {
+  color: #00ff48;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+  color: #00dd3a;
+}
+
+/* Signup Features */
+.signup-features {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  border: 2px solid #e9ecef;
+}
+
+.signup-features h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 30px;
+  font-weight: 900;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #00ff48;
+  color: #000;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 20px;
+  flex-shrink: 0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.feature-text h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  color: #000;
+  margin: 0 0 5px 0;
+  font-weight: 700;
+}
+
+.feature-text p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Responsive Signup */
+@media (max-width: 1024px) {
+  .signup-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .signup-box {
+    padding: 40px;
+  }
+
+  .signup-features {
+    padding: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 70px 30px 50px;
+    margin: 0 20px 60px;
+    border-radius: 20px;
+  }
+
+  .page-hero h1 {
+    font-size: 44px;
+  }
+
+  .signup-wrapper {
+    gap: 30px;
+  }
+
+  .signup-box {
+    padding: 35px;
+  }
+
+  .signup-box h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .signup-subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .form-group input {
+    padding: 12px 14px 12px 45px;
+    font-size: 14px;
+  }
+
+  .signup-features {
+    padding: 30px;
+  }
+
+  .signup-features h3 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .feature-item {
+    gap: 15px;
+  }
+
+  .feature-text h4 {
+    font-size: 15px;
+  }
+
+  .feature-text p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero {
+    padding: 55px 20px 40px;
+    margin: 0 15px 50px;
+    border-radius: 15px;
+  }
+
+  .page-hero h1 {
+    font-size: 36px;
+  }
+
+  .page-hero p {
+    font-size: 15px;
+  }
+
+  .signup-wrapper {
+    gap: 25px;
+  }
+
+  .signup-box {
+    padding: 25px;
+  }
+
+  .signup-box h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .signup-subtitle {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    gap: 6px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .input-icon {
+    left: 14px;
+    font-size: 18px;
+  }
+
+  .form-group input {
+    padding: 11px 12px 11px 44px;
+    font-size: 14px;
+    border-width: 2px;
+  }
+
+  .error-text {
+    font-size: 11px;
+  }
+
+  .submit-btn {
+    padding: 12px 20px;
+    font-size: 15px;
+    margin-top: 8px;
+    border-width: 2px;
+  }
+
+  .login-link {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+  .signup-features {
+    padding: 22px;
+  }
+
+  .signup-features h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .features-list {
+    gap: 20px;
+  }
+
+  .feature-item {
+    gap: 15px;
+  }
+
+  .feature-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .feature-text h4 {
+    font-size: 14px;
+  }
+
+  .feature-text p {
+    font-size: 12px;
+  }
+}
