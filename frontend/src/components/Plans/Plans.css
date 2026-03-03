@@ -58,6 +58,31 @@
     border-radius: 5px;
 }
 
+.buy-btn {
+    background-color: #00ff48;
+    border: 2px solid #000;
+    color: #000;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.buy-btn:hover {
+    background-color: #00dd3a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 255, 72, 0.3);
+}
+
+.buy-btn:active {
+    transform: translateY(0);
+}
+
 @media (max-width: 1024px) {
     .plancards {
         grid-template-columns: repeat(2, 1fr);
@@ -141,5 +166,10 @@
     .check {
         font-size: 18px;
         padding: 2px;
+    }
+    .buy-btn {
+        padding: 10px 24px;
+        font-size: 14px;
+        margin-top: 18px;
     }
 }

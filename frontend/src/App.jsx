@@ -17,6 +17,8 @@ import Terms from './pages/Terms'
 import NotFound from './pages/NotFound'
 import Footer from './components/Footer/Footer'
 import Preloader from './components/Preloader/Preloader'
+import AIChat from './components/AIChat/AIChat'
+import CookiePopup from './components/CookiePopup/CookiePopup'
 
 const ScrollToTop = () => {
   const { pathname } = useLocation()
@@ -62,6 +64,8 @@ const App = () => {
           <Route path='*' element={<NotFound />} />
         </Routes>
         <Footer />
+        <AIChat />
+        <CookiePopup />
       </Router>
     </>
   )
