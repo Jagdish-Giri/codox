@@ -32,19 +32,5 @@ Backend (Coming Soon) :
 
 Planning to add Node.js + MongoDB soon. Need to figure out real-time features first.
 
-## Folder Sturcture 
-```
-codox/
-├── frontend/              # All the React stuff lives here
-│   ├── src/
-│   │   ├── components/    # Reusable bits like header, footer
-│   │   ├── pages/         # Different pages (Home, Courses, etc.)
-│   │   └── App.jsx        # The main component that ties everything
-│   └── package.json
-├── README.md             # You're reading it!
-├── CONTRIBUTING.md       # Wanna help? Check this out
-└── LICENSE              # MIT - keep it open.
-```
-
 Built by Girish Giri.
 
