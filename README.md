@@ -9,12 +9,13 @@ You know how most learning platforms are just boring video lectures? Yeah, I wan
 I built this because I noticed my friends losing interest in traditional courses. So I thought, "Why not make it more interactive?" And here we are.
 
 ## Cool Features I've Added
-
+```
 -Gamified Learning : Earn XP, unlock achievements, climb the leaderboard. Makes studying actually fun!
 -Multiple Paths :  Whether you're into frontend, backend, or full-stack - there's something for everyone
 -AI Chat Assistant : Stuck? Just ask! (Though I'm still working on making it smarter) 
 -Clean Design : No clutter, just clean green and black theme that's easy on the eyes
 -Mobile Friendly : easy and mobile friendly easy to use for mobile which is good for mobile learner's
+```
 
 ## Tech Stack (What I Used)
 
@@ -45,5 +46,5 @@ codox/
 └── LICENSE              # MIT - keep it open.
 ```
 
-Built with ☕ and late nights by Girish Giri.
+Built by Girish Giri.
 
